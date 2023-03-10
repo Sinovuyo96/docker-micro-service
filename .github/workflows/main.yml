@@ -34,4 +34,7 @@ jobs:
         run: |
           ls -l
           docker build -t sno-node-img .
-          docker image ps
+          docker image ls
+          docker ps
+          docker logs 
+          docker logs -f --until=2s test
