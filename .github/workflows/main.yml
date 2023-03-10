@@ -35,4 +35,3 @@ jobs:
           ls -l
           docker build . -t sno-node-img
           docker image ps
-          docker images
