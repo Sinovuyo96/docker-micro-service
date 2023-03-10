@@ -19,6 +19,9 @@ jobs:
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
+    env:
+      REPOSITORY: sno-node-img
+      IMAGE_ID: b9c352087d10
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -36,4 +39,4 @@ jobs:
           docker build -t sno-node-img .
           docker image ls
           docker ps
-          docker logs -f --until=2s test
+          docker logs -f --until=2s ${{IMAGE_ID}}
