@@ -33,7 +33,15 @@ jobs:
      # - run: npm install
 
       # Runs a single command using the runners shell
-      - name: Run a one-line script
+      - name: Docker Build NodeJs
+        run: |
+          ls -l
+          docker build -t sno-node-img .
+          docker run -dp 3000:3000 sno-node-img
+          docker image ls
+          docker ps
+ #         docker logs -f --until=2s ${{IMAGE_ID}}
+      - name: Docker Build Python
         run: |
           ls -l
           docker build -t sno-node-img .
