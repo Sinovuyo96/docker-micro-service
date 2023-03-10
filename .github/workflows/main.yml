@@ -34,6 +34,7 @@ jobs:
         run: |
           ls -l
           docker build -t sno-node-img .
+          sudo docker run --name sno-node-img -p 80:80
           docker image ls
           docker ps
           docker logs 
