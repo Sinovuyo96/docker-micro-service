@@ -44,7 +44,7 @@ jobs:
       - name: Docker Build Python
         run: |
           ls -l
-          docker build -t sno-node-img .
+          docker build ./python
           docker run -dp 3000:3000 sno-node-img
           docker image ls
           docker ps
