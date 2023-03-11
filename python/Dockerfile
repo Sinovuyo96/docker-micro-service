@@ -7,7 +7,9 @@ ENV http_proxy=""
 ENV https_proxy=""
 
 # RUN apt-get -y update && apt-get install -y\
-RUN python3.8\
+RUN sudo apt update\
+    python --version\
+    sudo apt install python3.8\
     # python install pip\
     python3-pip
 
