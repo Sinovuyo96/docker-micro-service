@@ -8,8 +8,7 @@ ENV https_proxy=""
 
 RUN apt-get- -y update && apt-get install -y\
     python3.8\
-    python3-pip\
-    git
+    python3-pip
 
 COPY python.py /
 
